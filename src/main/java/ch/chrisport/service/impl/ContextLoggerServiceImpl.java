@@ -11,7 +11,7 @@ public class ContextLoggerServiceImpl implements ContextLoggerService {
 
     @Override
     public void logContext() {
-        log.info("Current context: {}    executing Thread ID: {}", MDC.getCopyOfContextMap(), Thread.currentThread().getId());
+        log.info("executorThreadId: {}; ContextMap on execution: {}", Thread.currentThread().getId(), MDC.getCopyOfContextMap());
     }
 
 }
